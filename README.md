@@ -1,19 +1,17 @@
 # AI in IT operations notes
 
-Working notes on practical AI enablement in IT operations: automation, knowledge access, operational relief. Sober by design.
+Questions and evaluation material for bounded AI use cases in IT operations.
 
-## Why this exists
+## Start here
+- [AI pilot evaluation template](templates/ai-evaluation.md)
 
-IT operations is drowning in text: tickets, runbooks, logs, change records. Language models are genuinely good at text. That overlap is real, and it is also narrower than the marketing suggests. These notes try to keep the two apart.
+## Notes
+- [Where AI may help](where-ai-helps-today.md)
+- [What to leave alone](what-to-leave-alone.md)
+- [Operating model questions](operating-model-for-ai-in-ops.md)
 
-## Contents
+The emphasis is on defining a task, evaluating the result and accounting for verification effort. Examples are hypotheses to test, not claims of measured production benefits.
 
-Start with `where-ai-helps-today.md`, then `operating-model-for-ai-in-ops.md` and `what-to-leave-alone.md`.
+These are personal notes on an area I am exploring, with an emphasis on evaluation before wider use.
 
-## Status and scope
-
-Personal working notes, evolving. Generic frameworks only, no employer material. Views are my own.
-
-## License
-
-Text: CC BY 4.0. Code samples: MIT.
+Text and templates are licensed under [CC BY 4.0](LICENSE).

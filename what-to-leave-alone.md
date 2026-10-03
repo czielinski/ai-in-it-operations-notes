@@ -1,17 +1,25 @@
-# What to leave alone
+# Boundaries for an initial AI pilot
 
-Not forever. Just not first, and not without a track record.
+For an initial evaluation, choose a task where an error can be detected and contained before it causes operational harm. The following boundaries help define that scope; any later expansion needs evidence and a separate decision about the added risk.
 
-**Autonomous change execution in production.** A system that acts on infrastructure without a human decision combines the two things you least want together: high blast radius and unclear accountability.
+## Production changes
 
-**Automatic alert suppression.** Letting a model decide which alarms are noise is an elegant way to sleep through the one that was not.
+Start with analysis or proposals that a qualified person can review. Production write access requires a defined action scope, authorised permissions, approval rules, auditability and recovery. General confidence in a model is not an adequate basis for granting it broad infrastructure access.
 
-**Actions without logs.** Anything an AI system does must be attributable and reconstructable. No log, no action. This is not an AI rule; it is an operations rule that AI does not get to skip.
+## Alert suppression
 
-**Sensitive data without explicit clearance.** Health-related, personal, or otherwise protected data does not enter any AI system on the strength of enthusiasm. Clearance first, capability second.
+Evaluate suggested grouping or prioritisation while preserving the original alerts and existing response path. Measure missed important cases as well as reduced noise. Suppressing alerts changes the information available to responders and needs its own acceptance criteria.
 
-**Systems whose failure modes you cannot explain.** If nobody can say how the capability fails and what happens then, it has no place in an operational chain.
+## Unapproved data or access
 
-**Vendor magic without an exit.** Any AI capability woven into operations needs the same exit path as any other sourcing decision: your data comes back, your process survives the vendor.
+Use data and services approved for the intended task. Define who may retrieve which material and what may be retained. Test those boundaries with permitted examples before introducing operational information.
 
-The pattern behind the list: operations runs on accountability, attribution, and reversibility. Tools that weaken those three do not become acceptable by being impressive.
+## Results that cannot be checked
+
+A reviewer needs relevant evidence and enough time to assess it. A fluent explanation or a linked source does not by itself establish correctness. Prefer tasks with observable outcomes and a clear response to uncertainty.
+
+## Dependence without a fallback
+
+Plan for unavailable services, incorrect output and changes in the supplier's terms or capabilities. Preserve the information and process needed to continue the work. Logging should support investigation while respecting data-handling and retention requirements.
+
+Record the boundaries and stop conditions in the [pilot evaluation template](templates/ai-evaluation.md). If a failure cannot be contained within them, narrow the task or choose a different approach.

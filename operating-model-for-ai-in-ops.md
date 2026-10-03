@@ -1,15 +1,23 @@
 # An operating model for AI in operations
 
-The most useful mental move is to treat AI like any other technology entering regular operations. No special magic, no special exemptions.
+An AI-supported operational task needs a defined service boundary: what it may do, who relies on it, what data it can access and how the work continues when its output is wrong or unavailable.
 
-**A named owner.** Someone is accountable for each AI-supported capability: its scope, its data boundaries, its quality, its cost. If nobody owns it, it is a demo, not a service.
+## Ownership and data
 
-**Defined data boundaries.** What data may the system see, where does it flow, what is retained, who may ask what. Settled in writing before rollout, together with security and data protection, not discovered afterward.
+Name the owner of the supported process and the parties responsible for the AI service, its data sources and its access controls. Agree permitted data, retention and service use through the organisation's relevant approval process.
 
-**Evaluation before rollout.** Accuracy on your own cases, not on vendor demos. A small, honest test set of real questions with known answers tells you more than any benchmark.
+For knowledge access, a user should only receive information they are entitled to see. Treat retrieved documents and tickets as input data; instructions embedded in them must not acquire authority to change the task or grant access.
 
-**Build to run applies.** A runbook, monitoring, a fallback path when the system is wrong or unavailable, and a support path for users. If those are missing, the capability is not operable; it is merely installed.
+## Evaluation and change
 
-**Assistive before autonomous.** The system proposes; a human disposes. Autonomy is not a starting point, it is something a capability earns through a track record you can inspect.
+Use representative, permitted cases with expected outcomes or a clear assessment rubric. Include missing information, contradictory sources and cases that should be declined. External benchmarks can inform selection, while task-specific testing is needed to judge suitability for the intended workflow.
 
-**A review cadence.** Models, prompts, and usage drift. A quarterly look at quality, cost, and incidents keeps the capability honest and keeps surprises small.
+Version the relevant model configuration, prompts and source material. Re-evaluate after material changes and when observed errors suggest the existing test set no longer covers the work.
+
+## Operation and human control
+
+Specify who reviews the result, how to reach support and how to use the existing process without AI assistance. Monitor quality, verification effort, cost and failures that matter to the task. Set the review cadence according to usage and impact, alongside reviews triggered by changes or incidents.
+
+If the system can act, define narrowly scoped permissions, approval points, audit records and recovery arrangements. Successful drafting or question answering is insufficient evidence for expanding those permissions. Reviewers also need the time and information to check the output meaningfully.
+
+The [pilot evaluation template](templates/ai-evaluation.md) records the evidence and conditions for continuing, changing or stopping an evaluation.

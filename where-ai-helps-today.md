@@ -1,17 +1,24 @@
-# Where AI helps today
+# Where AI may help
 
-The honest short list for IT operations, based on what works with humans in the loop and a low blast radius.
+These are candidate tasks for a bounded evaluation. They are not claims of measured production benefits; whether they help depends on the data, task, users and effort needed to verify the output.
 
-**Knowledge access.** Question answering over your own runbooks, tickets, and documentation. The value is not intelligence; it is retrieval that survives bad folder structures. This is usually the best first use case: high relief, low risk, easy to evaluate.
+## Candidate tasks and the questions to test
 
-**Drafting.** First versions of change descriptions, incident summaries, stakeholder communication, and documentation updates. The human edits and signs; the model removes the blank page.
+| Task | Potential assistance | What to evaluate |
+|---|---|---|
+| Knowledge access | Find relevant runbooks and explain documented steps. | Correct and current sources, access boundaries, unsupported answers and appropriate abstention. |
+| Drafting | Prepare change descriptions, incident updates or documentation drafts. | Factual accuracy, missing context and the time needed to review and correct the draft. |
+| Triage | Suggest categories, routing or duplicate tickets. | Errors by category, consequences of misrouting and whether the suggestion improves on existing rules. |
+| Summarisation | Assemble an incident timeline or condense operational notes. | Omitted evidence, invented causal claims and preservation of uncertainty. |
 
-**Triage and classification.** Routing tickets, tagging incidents, spotting duplicates. Boring, measurable, and exactly the kind of pattern work models do well.
+## Select a task with a usable baseline
 
-**Summarization.** Long incident timelines, log excerpts, and meeting notes compressed into something a human can act on. Useful precisely because nobody reads the long version anyway.
+Choose a task whose result a qualified user can assess. Record how the work is currently done and compare the proposed assistance with that process, including a simpler search or rules-based approach where relevant.
 
-## Selection criteria
+Use permitted examples covering routine work, difficult cases and missing or conflicting information. Define the acceptance criteria before testing, including the errors that would make the approach unsuitable. Count verification and correction effort alongside generation time.
 
-Four tests before anything goes live: a human stays in the loop for anything that changes state; the blast radius of a wrong answer is small and visible; the relief is measurable (time saved, tickets deflected, faster onboarding); and the data boundaries are clear before the first prompt is written, not after.
+## Keep assistance within its tested boundary
 
-Start where all four are true. Expand from evidence, not from roadmap pressure.
+A useful draft or retrieved answer does not establish that the system can execute a production change safely. Changes to the task, data, model or permissions can require a new evaluation.
+
+Record the baseline, results and continue/change/stop decision in the [AI pilot evaluation template](templates/ai-evaluation.md).
